@@ -6,6 +6,7 @@ import Hero from '@/components/home/Hero';
 import Features from '@/components/home/Features';
 import Testimonials from '@/components/home/Testimonials';
 import CTASection from '@/components/home/CTASection';
+import OurApproach from '@/components/home/OurApproach';
 import AuthModal from '@/components/auth/AuthModal';
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <Features />
+        <OurApproach />
         <Testimonials />
         <CTASection />
       </main>

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -10,6 +10,7 @@ interface ContainerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
   padding?: boolean;
   animate?: boolean;
+  motionProps?: MotionProps;
 }
 
 export const Container = ({
@@ -19,6 +20,7 @@ export const Container = ({
   size = 'lg',
   padding = true,
   animate = false,
+  motionProps,
 }: ContainerProps) => {
   const sizeClasses = {
     sm: 'max-w-3xl',
@@ -35,12 +37,17 @@ export const Container = ({
     className
   );
 
+  const defaultMotionProps: MotionProps = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 },
+    ...motionProps
+  };
+
   if (animate) {
     return (
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        {...defaultMotionProps}
         className={containerClasses}
       >
         {children}
