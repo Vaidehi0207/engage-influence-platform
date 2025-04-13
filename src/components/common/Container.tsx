@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -8,6 +9,7 @@ interface ContainerProps {
   as?: React.ElementType;
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
   padding?: boolean;
+  animate?: boolean;
 }
 
 export const Container = ({
@@ -16,6 +18,7 @@ export const Container = ({
   as: Component = 'div',
   size = 'lg',
   padding = true,
+  animate = false,
 }: ContainerProps) => {
   const sizeClasses = {
     sm: 'max-w-3xl',
@@ -25,15 +28,28 @@ export const Container = ({
     full: 'max-w-full'
   };
 
+  const containerClasses = cn(
+    'w-full mx-auto',
+    sizeClasses[size],
+    padding && 'px-4 sm:px-6 lg:px-8',
+    className
+  );
+
+  if (animate) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className={containerClasses}
+      >
+        {children}
+      </motion.div>
+    );
+  }
+
   return (
-    <Component
-      className={cn(
-        'w-full mx-auto',
-        sizeClasses[size],
-        padding && 'px-4 sm:px-6 lg:px-8',
-        className
-      )}
-    >
+    <Component className={containerClasses}>
       {children}
     </Component>
   );
