@@ -96,7 +96,7 @@ const Hero = () => {
                 delay: 0.6,
                 ease: "easeOut"
               }}
-              className="absolute -top-4 -left-4 md:-top-6 md:-left-6 bg-white rounded-lg shadow-lg p-4 w-36"
+              className="absolute -top-4 -left-4 md:-top-6 md:-left-6 bg-white rounded-lg shadow-lg p-4 w-36 z-20"
             >
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
@@ -117,7 +117,7 @@ const Hero = () => {
                 delay: 0.9,
                 ease: "easeOut"
               }}
-              className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white rounded-lg shadow-lg p-4 w-40"
+              className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white rounded-lg shadow-lg p-4 w-40 z-10"
             >
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
@@ -139,7 +139,7 @@ const Hero = () => {
                 delay: 1.2,
                 ease: "easeOut"
               }}
-              className="absolute top-1/2 -right-3 md:-right-10 transform -translate-y-1/2 bg-white rounded-lg shadow-lg p-4 w-44"
+              className="absolute top-1/2 -right-3 md:-right-20 transform -translate-y-1/2 bg-white rounded-lg shadow-lg p-4 w-38 z-10"
             >
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">

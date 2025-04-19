@@ -95,7 +95,7 @@ const Creators = () => {
       <Navbar />
       
       {/* Hero Section with Animation */}
-      <section className="bg-gradient-to-r from-brand-blue/90 to-brand-purple/90 pt-32 pb-16 text-white overflow-hidden relative">
+      <section className="bg-gradient-to-r from-brand-dark to-brand-blue pt-32 pb-16 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover opacity-10"></div>
         <Container className="relative z-10">
           <div className="max-w-3xl animate-fade-in">
@@ -106,7 +106,7 @@ const Creators = () => {
               Connect with brands that value your unique voice and audience. Maximize your earning potential while staying true to your content vision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-brand-orange hover:bg-opacity-90 text-white border-none" size="lg">
+              <Button className="bg-brand-orange hover:bg-opacity-70 text-white border-none" size="lg">
                 Join as Creator
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -116,7 +116,7 @@ const Creators = () => {
             </div>
           </div>
         </Container>
-        <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-12 "></div>
       </section>
 
       {/* Business Impact Section */}

@@ -19,7 +19,7 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-brand-purple to-brand-blue pt-32 pb-16 text-white overflow-hidden relative">
+      <section className="bg-gradient-to-r from-brand-dark to-brand-blue pt-32 pb-16 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover opacity-10"></div>
         <Container className="relative z-10">
           <motion.div 
@@ -41,7 +41,7 @@ const About = () => {
             </Button>
           </motion.div>
         </Container>
-        <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-12  "></div>
       </section>
 
       {/* Our Story Section */}
@@ -86,8 +86,8 @@ const About = () => {
                   </div>
                   <div className="ml-3">
                     <div className="text-sm font-semibold text-gray-900">Trusted by</div>
-                    <div className="text-2xl font-bold text-brand-purple">15,000+</div>
-                    <div className="text-sm text-gray-500">creators & brands</div>
+                    <div className="text-2xl font-bold text-brand-dark">15,000+</div>
+                    <div className="text-sm text-gray-1000">creators & brands</div>
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ const About = () => {
       </section>
 
       {/* Stats Banner */}
-      <section className="py-16 bg-gradient-to-r from-brand-purple to-brand-blue text-white">
+      <section className="py-16 bg-gradient-to-r from-brand-dark to-brand-purple text-white">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div 
@@ -460,7 +460,7 @@ const About = () => {
       <section className="py-20 bg-brand-purple/5">
         <Container>
           <motion.div 
-            className="bg-gradient-to-r from-brand-purple/80 to-brand-blue/80 rounded-2xl overflow-hidden shadow-xl"
+            className="bg-gradient-to-r from-brand-dark/85 to-brand-purple/80 rounded-2xl overflow-hidden shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -491,143 +491,139 @@ const About = () => {
         </Container>
       </section>
 
-      {/* Contact Us */}
-      <section className="py-20 bg-white">
-        <Container>
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions or want to learn more? Our team is here to help.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="space-y-8">
-                <div className="flex items-start">
-                  <div className="h-12 w-12 bg-brand-purple/10 rounded-full flex items-center justify-center mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                    <p className="text-gray-600 mb-1">General Inquiries:</p>
-                    <a href="mailto:info@influence.io" className="text-brand-purple hover:underline">info@influence.io</a>
-                    <p className="text-gray-600 mt-2 mb-1">Support:</p>
-                    <a href="mailto:support@influence.io" className="text-brand-purple hover:underline">support@influence.io</a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="h-12 w-12 bg-brand-blue/10 rounded-full flex items-center justify-center mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                    <p className="text-gray-600 mb-1">North America:</p>
-                    <a href="tel:+1-800-123-4567" className="text-brand-blue hover:underline">+1 (800) 123-4567</a>
-                    <p className="text-gray-600 mt-2 mb-1">Europe:</p>
-                    <a href="tel:+44-20-1234-5678" className="text-brand-blue hover:underline">+44 20 1234 5678</a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="h-12 w-12 bg-brand-orange/10 rounded-full flex items-center justify-center mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
-                    <p className="text-gray-600 mb-1">Headquarters:</p>
-                    <address className="not-italic text-gray-800">
-                      123 Innovation Way<br />
-                      San Francisco, CA 94107<br />
-                      United States
-                    </address>
-                    <p className="text-gray-600 mt-2 mb-1">European Office:</p>
-                    <address className="not-italic text-gray-800">
-                      456 Tech Avenue<br />
-                      London, EC2A 1AB<br />
-                      United Kingdom
-                    </address>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg border border-gray-100 p-8"
-            >
-              <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                  <input 
-                    type="text" 
-                    id="subject" 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
-                    placeholder="How can we help you?"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea 
-                    id="message" 
-                    rows={4} 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
-                    placeholder="Your message..."
-                  ></textarea>
-                </div>
-                <Button className="w-full bg-brand-purple hover:bg-opacity-90 text-white border-none" size="lg">
-                  Send Message
-                </Button>
-              </form>
-            </motion.div>
+{/* Contact Us */}
+<section className="py-20 bg-white">
+  <Container>
+    <motion.div 
+      className="text-center mb-16"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+        Get In Touch
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Reach out to us with your questions, suggestions, or feedback.
+      </p>
+    </motion.div>
+
+    <div className="grid md:grid-cols-2 gap-12">
+      {/* Contact Details */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <div className="space-y-8">
+          {/* Email */}
+          <div className="flex items-start">
+            <div className="h-12 w-12 bg-brand-purple/10 rounded-full flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
+              <p className="text-gray-600">For queries and support, drop us a line:</p>
+              <a href="mailto:info@influence.io" className="text-brand-purple hover:underline block mt-1">info@influence.io</a>
+              <a href="mailto:support@influence.io" className="text-brand-purple hover:underline block">support@influence.io</a>
+            </div>
           </div>
-        </Container>
-      </section>
+
+          {/* Call */}
+          <div className="flex items-start">
+            <div className="h-12 w-12 bg-brand-blue/10 rounded-full flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
+              <p className="text-gray-600">Talk to our team directly:</p>
+              <a href="tel:+1-800-123-4567" className="text-brand-blue hover:underline block mt-1">+1 (800) 123-4567 (US)</a>
+              <a href="tel:+44-20-1234-5678" className="text-brand-blue hover:underline block">+44 20 1234 5678 (UK)</a>
+            </div>
+          </div>
+
+          {/* Visit */}
+          <div className="flex items-start">
+            <div className="h-12 w-12 bg-brand-orange/10 rounded-full flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
+              <p className="text-gray-600">Come see us at:</p>
+              <address className="not-italic text-gray-800 mt-1">
+                123 Innovation Way, San Francisco, CA<br />
+                456 Tech Ave, London EC2A 1AB
+              </address>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Form */}
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8 max-w-md mx-auto w-full"
+      >
+        <h3 className="text-xl font-bold mb-6 text-center">Send Us a Message</h3>
+        <form className="space-y-5">
+          <div className="grid grid-cols-1 gap-5">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
+                placeholder="your.email@example.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
+                placeholder="How can we help?"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea 
+                id="message" 
+                rows={4} 
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" 
+                placeholder="Your message..."
+              ></textarea>
+            </div>
+          </div>
+          <Button className="w-full bg-brand-purple hover:bg-opacity-90 text-white border-none" size="lg">
+            Send Message
+          </Button>
+        </form>
+      </motion.div>
+    </div>
+  </Container>
+</section>
 
       <Footer />
     </div>
