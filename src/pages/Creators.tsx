@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/creators/HeroSection';
@@ -6,9 +8,11 @@ import ImpactSection from '@/components/creators/ImpactSection';
 import StatisticsBanner from '@/components/creators/StatisticsBanner';
 import ConnectSection from '@/components/creators/ConnectSection';
 import { Container } from '@/components/common/Container';
-import ContactForm from '@/components/brands/ContactForm';
+import { Button } from '@/components/ui/button';
 
 const Creators = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -68,8 +72,13 @@ const Creators = () => {
               </div>
             </div>
             
-            <div>
-              <ContactForm />
+            <div className="flex flex-col items-center justify-center">
+              <Button 
+                onClick={() => navigate('/creator-campaign')}
+                className="w-full max-w-md py-6 text-lg"
+              >
+                Start Your Application Now
+              </Button>
             </div>
           </div>
         </Container>
