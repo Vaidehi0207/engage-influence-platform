@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
@@ -12,6 +12,7 @@ import { Container } from '@/components/common/Container';
 import ContactForm from '@/components/brands/ContactForm';
 
 const Brands = () => {
+  const navigate = useNavigate();
   const impactData = [
     {
       title: "Increased ROI",
@@ -110,8 +111,13 @@ const Brands = () => {
                 Request Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20" size="lg">
-                View Case Studies
+              <Button 
+                variant="outline" 
+                className="bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20" 
+                size="lg"
+                onClick={() => navigate('/creators-list')}
+              >
+                Browse Creators
               </Button>
             </div>
           </div>

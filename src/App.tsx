@@ -11,6 +11,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import CreatorCampaign from "./pages/CreatorCampaign";
 import CreatorDashboard from "./pages/CreatorDashboard";
+import CreatorsList from "./pages/CreatorsList";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/creator-campaign" element={<CreatorCampaign />} />
           <Route path="/creator-dashboard" element={<CreatorDashboard />} />
+          <Route path="/creators-list" element={<CreatorsList />} />
           <Route path="/blog" element={<NotFound />} />
           <Route path="/terms" element={<NotFound />} />
           <Route path="/privacy" element={<NotFound />} />
