@@ -85,8 +85,8 @@ const creatorsSampleData = [
 const CreatorsList = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState('');
-  const [platformFilter, setPlatformFilter] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+  const [platformFilter, setPlatformFilter] = useState('all');
   const [followerRange, setFollowerRange] = useState([0, 200000]);
   const [showFilters, setShowFilters] = useState(true); // Changed to true to show filters by default
   const [showResults, setShowResults] = useState(false); // Added to control when to show results
@@ -94,8 +94,8 @@ const CreatorsList = () => {
   const filteredCreators = creatorsSampleData.filter((creator) => {
     const matchesSearch = creator.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           creator.bio.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = categoryFilter === '' || creator.category === categoryFilter;
-    const matchesPlatform = platformFilter === '' || creator.platform === platformFilter;
+    const matchesCategory = categoryFilter === 'all' || creator.category === categoryFilter;
+    const matchesPlatform = platformFilter === 'all' || creator.platform === platformFilter;
     const matchesFollowers = creator.followers >= followerRange[0] && creator.followers <= followerRange[1];
     
     return matchesSearch && matchesCategory && matchesPlatform && matchesFollowers;
@@ -107,8 +107,8 @@ const CreatorsList = () => {
 
   const handleResetFilters = () => {
     setSearchTerm('');
-    setCategoryFilter('');
-    setPlatformFilter('');
+    setCategoryFilter('all');
+    setPlatformFilter('all');
     setFollowerRange([0, 200000]);
     setShowResults(false);
   };
@@ -153,7 +153,7 @@ const CreatorsList = () => {
                     <SelectValue placeholder="All Categories" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Categories</SelectItem>
+                    <SelectItem value="all">All Categories</SelectItem>
                     <SelectItem value="beauty">Beauty & Makeup</SelectItem>
                     <SelectItem value="fashion">Fashion & Style</SelectItem>
                     <SelectItem value="travel">Travel</SelectItem>
@@ -172,7 +172,7 @@ const CreatorsList = () => {
                     <SelectValue placeholder="All Platforms" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Platforms</SelectItem>
+                    <SelectItem value="all">All Platforms</SelectItem>
                     <SelectItem value="instagram">Instagram</SelectItem>
                     <SelectItem value="youtube">YouTube</SelectItem>
                     <SelectItem value="tiktok">TikTok</SelectItem>
